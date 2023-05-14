@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    font-size: 10px;
+    font-family: monospace;
+}
+
+:root {
+    --color : #1E2128;
+    --color-1 : #292C33;
+    --color-2: #34373D;
+    --color-3: #4B4D53;
+    --color-4: #E66100;
+    --color-5: #ffffff;
+}
