@@ -1,0 +1,17 @@
+@media screen and (max-width: 480px) {
+    #root {
+        max-width: 100%;
+        height: 100vh;
+        border-radius: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+    .record {
+        height: 100vh;
+    }
+    .keyboard {
+        justify-content: center;
+    }
+}
