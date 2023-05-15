@@ -5,13 +5,7 @@
 }
 html,body {
     font-size: 10px;
-    font-family: monospace;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    font-family: 'Roboto Mono', monospace;
 }
 
 :root {

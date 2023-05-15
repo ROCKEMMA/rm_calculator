@@ -1,6 +1,5 @@
 render_keys();
 
-let keys = document.querySelectorAll(".key_item");
 let results = document.querySelector("#results-screen");
 
 function add_key(){
@@ -19,6 +18,11 @@ function reset_all(){
     results2.value = "0";
     document.querySelector(".record").innerHTML = "";
 }
+function delete_letter(){
+    var content = results.value;
+    var nuevoValor = content.slice(0, -1);
+    results.value = nuevoValor;
+}
 
 function calculate(){
     operation = document.querySelector("#results-screen");
@@ -28,17 +32,21 @@ function calculate(){
 }
 
 // Evento de todas las teclas
-keys.forEach((key)=>{
-    let key__ = key.innerHTML;
+let keys_dom = document.querySelectorAll(".key_item");
 
-    if(key__ != "=" && key__ != "C" && key__ != "AC"){
-        key.addEventListener("click",add_key);
-    }else if (key__ == "C"){
-        key.addEventListener("click",reset_operation);
-    }else if(key__ == "="){
-        key.addEventListener("click", calculate);
-    }else if(key__ == "AC"){
-        key.addEventListener("click",reset_all);
+keys_dom.forEach((keys_content) => {
+    let content = keys_content.innerHTML;
+
+    if (content == "C") {
+        keys_content.addEventListener("click", reset_operation);
+    } else if (content == "=") {
+        keys_content.addEventListener("click", calculate);
+    } else if (content == "AC") {
+        keys_content.addEventListener("click", reset_all);
+    } else if (content == '<img src="./img/delete.png" class="delete">') {
+        keys_content.addEventListener("click", delete_letter);
+    } else {
+        keys_content.addEventListener("click", add_key);
     }
 });
 

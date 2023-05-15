@@ -3,12 +3,27 @@
     margin: auto;
     background-color: var(--color);
     border-radius: 10px;
+    
 }
 .title {
     width: 100%;
+    padding: 0.1rem 1rem;
+    background-color: #16171D;
     color: var(--color-5);
     font-size: 1.5rem;
-    text-align: center;
+    
+    display: flex;
+    align-items: center;
+}
+.title .img {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-image: url("../img/log.png");
+    background-size: 130%;
+    background-position: center;
+}
+.title span {
+    font-weight: 600;
 }
 .record {
     list-style: none;
@@ -17,25 +32,36 @@
     background-color: var(--color-2);
     padding: 1rem;
     color: var(--color-5);
-    font-size: 2rem;
 
     display: flex;
     flex-direction: column;
-    /* justify-items: flex-end; */
+    justify-items: flex-end;
     overflow-y: scroll;
 }
 
 .record li {
     width: 100%;
-    text-align: end;
-    /*    margin-top: auto; */
-    font-size: 1.8rem;
+/*     text-align: end; */
+    font-size: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.equal-sign {
+    color: var(--color-4);
+    justify-self: right;
+
+}
+.result {
+    font-weight: 500;
+    justify-self: right;
 }
 #results-screen {
     display: flex;
     width: 100%;
     height: 6.5rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
     border: none;
     outline: none;
@@ -56,7 +82,7 @@
     background-color: var(--skyblue);
     border-radius: 1rem;
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     background-color: var(--color-2);
     color: var(--color-5);
     cursor: pointer;
@@ -71,6 +97,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.delete {
+    width: 40%;
 }
 .key_item:active {
     background-color: red;
